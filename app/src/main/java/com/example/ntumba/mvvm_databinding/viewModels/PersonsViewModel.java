@@ -13,10 +13,8 @@ public class PersonsViewModel {
 
     /**
      * constructor
-     * @param person
      */
-    public PersonsViewModel(Person person){
-        this.person = person;
+    public PersonsViewModel(){
     }
 
 
