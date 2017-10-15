@@ -4,6 +4,8 @@ import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,7 +28,13 @@ public class PersonListFragment extends Fragment {
 
 
 
-
+    /**
+     * oncreate view method
+     * @param inflater
+     * @param container
+     * @param savedInstanceState
+     * @return
+     */
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
@@ -38,8 +46,13 @@ public class PersonListFragment extends Fragment {
         );
 
 
+        //setting the layout manager
+        fragmentBinding.fragmentRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+
+
         return fragmentBinding.getRoot();
     }
+
 
 
 
