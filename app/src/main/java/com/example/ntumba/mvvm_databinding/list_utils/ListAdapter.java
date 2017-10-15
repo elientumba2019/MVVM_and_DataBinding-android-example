@@ -1,10 +1,14 @@
 package com.example.ntumba.mvvm_databinding.list_utils;
 
 import android.content.Context;
+import android.databinding.DataBindingUtil;
 import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
 import com.example.ntumba.mvvm_databinding.Person;
+import com.example.ntumba.mvvm_databinding.R;
+import com.example.ntumba.mvvm_databinding.databinding.SingleItemBinding;
 
 import java.util.List;
 
@@ -39,7 +43,15 @@ public class ListAdapter extends RecyclerView.Adapter<ListViewHolder> {
      */
     @Override
     public ListViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        return null;
+
+        LayoutInflater inflater = LayoutInflater.from(context);
+        SingleItemBinding singleItem = DataBindingUtil.inflate(
+                inflater ,
+                R.layout.single_item ,
+                parent ,
+                false);
+
+        return new ListViewHolder(singleItem);
     }
 
 
