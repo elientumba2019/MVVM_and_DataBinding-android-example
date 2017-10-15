@@ -48,7 +48,7 @@ public class PersonSingleTon {
             person.setFirstname("Firstname " + (c + 1));
             person.setLastname("Lastname " + (c + 1));
             person.setSex((int)(Math.random() * 2));
-            person.setAvatar((person.getSex() == 0 ? R.drawable.female : R.drawable.female));
+            person.setAvatar((person.getSex() == 0 ? R.drawable.male : R.drawable.female));
 
             //adding the person to the list
             list.add(person);

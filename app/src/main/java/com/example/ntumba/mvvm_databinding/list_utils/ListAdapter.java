@@ -62,7 +62,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListViewHolder> {
      */
     @Override
     public void onBindViewHolder(ListViewHolder holder, int position) {
-
+        holder.bind(list.get(position));
     }
 
 
@@ -73,6 +73,6 @@ public class ListAdapter extends RecyclerView.Adapter<ListViewHolder> {
      */
     @Override
     public int getItemCount() {
-        return 0;
+        return list.size();
     }
 }
