@@ -25,8 +25,6 @@ public class PersonListFragment extends Fragment {
 
 
 
-
-
     /**
      * get instance method
      * @return
