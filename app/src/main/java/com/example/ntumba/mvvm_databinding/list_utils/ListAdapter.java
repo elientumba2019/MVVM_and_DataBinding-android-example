@@ -51,7 +51,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListViewHolder> {
                 parent ,
                 false);
 
-        return new ListViewHolder(singleItem);
+        return new ListViewHolder(singleItem , context);
     }
 
 
