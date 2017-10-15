@@ -1,5 +1,6 @@
 package com.example.ntumba.mvvm_databinding.fragments;
 
+import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -8,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.ntumba.mvvm_databinding.R;
+import com.example.ntumba.mvvm_databinding.databinding.FragmentListBinding;
 
 /**
  * Created by ntumba on 17-10-15.
@@ -21,6 +23,23 @@ public class PersonListFragment extends Fragment {
 
 
     public PersonListFragment(){}
+
+
+
+
+    @Nullable
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
+
+
+        //inflating the layout using the binding utils
+        FragmentListBinding fragmentBinding = DataBindingUtil.inflate(
+                inflater , R.layout.fragment_list , container , false
+        );
+
+
+        return fragmentBinding.getRoot();
+    }
 
 
 
