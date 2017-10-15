@@ -2,6 +2,8 @@ package com.example.ntumba.mvvm_databinding.activities;
 
 import android.support.v4.app.Fragment;
 
+import com.example.ntumba.mvvm_databinding.fragments.PersonListFragment;
+
 /**
  * Created by ntumba on 17-10-15.
  */
@@ -17,6 +19,6 @@ public class PersonListActivity extends SingleAbstractActivity {
      */
     @Override
     public Fragment getFragment() {
-        return null;
+        return PersonListFragment.getFragmentInstance();
     }
 }
