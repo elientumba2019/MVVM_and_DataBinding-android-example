@@ -1,7 +1,7 @@
 package com.example.ntumba.mvvm_databinding.list_utils;
 
 import android.support.v7.widget.RecyclerView;
-import android.view.View;
+import com.example.ntumba.mvvm_databinding.databinding.SingleItemBinding;
 
 /**
  * Created by ntumba on 17-10-15.
@@ -11,10 +11,10 @@ public class ListViewHolder extends RecyclerView.ViewHolder {
 
 
     /**
-     * constructor
-     * @param itemView
+     * constructor with argument
+     * @param itemBinding
      */
-    public ListViewHolder(View itemView) {
-        super(itemView);
+    public ListViewHolder(SingleItemBinding itemBinding) {
+        super(itemBinding.getRoot());
     }
 }
