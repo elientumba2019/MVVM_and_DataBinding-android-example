@@ -7,4 +7,13 @@ import android.support.v4.app.Fragment;
  */
 
 public class EditContactFragment extends Fragment {
+
+
+    /**
+     * returns an instance of the fragment
+     * @return
+     */
+    public static EditContactFragment getInstance(){
+        return  new EditContactFragment();
+    }
 }

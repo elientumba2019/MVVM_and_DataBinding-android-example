@@ -1,10 +1,12 @@
 package com.example.ntumba.mvvm_databinding.list_utils;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Toast;
 
+import com.example.ntumba.mvvm_databinding.activities.EditContactActivity;
 import com.example.ntumba.mvvm_databinding.model.Person;
 import com.example.ntumba.mvvm_databinding.databinding.SingleItemBinding;
 import com.example.ntumba.mvvm_databinding.viewModels.PersonsViewModel;
@@ -61,6 +63,8 @@ public class ListViewHolder extends RecyclerView.ViewHolder implements View.OnCl
 
         if(view.getId() == itemBinding.singleItem.getId()){
             Toast.makeText(context , person.getFirstname() , Toast.LENGTH_LONG).show();
+            Intent intent = EditContactActivity.getIntent(context);
+            context.startActivity(intent);
         }
     }
 }

@@ -1,11 +1,15 @@
 package com.example.ntumba.mvvm_databinding.model;
 
+import java.util.UUID;
+
 /**
  * Created by ntumba on 17-10-15.
  */
 
 public class Person {
 
+
+    private UUID id;
     private int avatar;
     private String firstname;
     private String lastname;

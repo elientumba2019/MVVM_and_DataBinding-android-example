@@ -18,6 +18,10 @@
             </intent-filter>
         </activity>
 
+
+        <activity android:name=".activities.EditContactActivity"
+            android:parentActivityName=".activities.PersonListActivity"/>
+
     </application>
 
 </manifest>
