@@ -28,6 +28,7 @@ public class ListViewHolder extends RecyclerView.ViewHolder {
 
 
     public void bind(Person person){
+        itemBinding.avatar.setImageResource(person.getAvatar());
         itemBinding.getPersonVM().setPerson(person);
         itemBinding.executePendingBindings();
     }

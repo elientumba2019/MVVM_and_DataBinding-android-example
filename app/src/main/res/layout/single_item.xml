@@ -28,7 +28,6 @@
             android:layout_width="70dp"
             android:padding="2dp"
             android:id="@+id/avatar"
-            android:src="@{PersonVM.avatar}"
             android:layout_height="70dp" />
 
 

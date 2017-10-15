@@ -5,6 +5,7 @@ import android.databinding.BaseObservable;
 import android.databinding.Bindable;
 
 import com.example.ntumba.mvvm_databinding.Person;
+import com.example.ntumba.mvvm_databinding.R;
 
 /**
  * Created by ntumba on 17-10-15.
@@ -29,6 +30,7 @@ public class PersonsViewModel extends BaseObservable{
      */
     public Person getPerson(){
         return person;
+        
     }
 
 
