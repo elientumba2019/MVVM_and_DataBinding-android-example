@@ -10,8 +10,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.ntumba.mvvm_databinding.PersonSingleTon;
 import com.example.ntumba.mvvm_databinding.R;
 import com.example.ntumba.mvvm_databinding.databinding.FragmentListBinding;
+import com.example.ntumba.mvvm_databinding.list_utils.ListAdapter;
 
 /**
  * Created by ntumba on 17-10-15.
@@ -48,6 +50,15 @@ public class PersonListFragment extends Fragment {
 
         //setting the layout manager
         fragmentBinding.fragmentRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+
+
+        //getting the singleton
+        PersonSingleTon singleTon = PersonSingleTon.getSingleTonInstance();
+        ListAdapter adapter = new ListAdapter(getActivity() , singleTon.getPersonList());
+
+
+        //setting the fragment adapter
+        fragmentBinding.fragmentRecyclerView.setAdapter(adapter);
 
 
         return fragmentBinding.getRoot();
