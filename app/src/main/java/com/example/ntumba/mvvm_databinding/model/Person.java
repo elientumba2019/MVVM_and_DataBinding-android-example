@@ -1,4 +1,4 @@
-package com.example.ntumba.mvvm_databinding;
+package com.example.ntumba.mvvm_databinding.model;
 
 /**
  * Created by ntumba on 17-10-15.

@@ -3,10 +3,9 @@ package com.example.ntumba.mvvm_databinding.list_utils;
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.ntumba.mvvm_databinding.Person;
+import com.example.ntumba.mvvm_databinding.model.Person;
 import com.example.ntumba.mvvm_databinding.databinding.SingleItemBinding;
 import com.example.ntumba.mvvm_databinding.viewModels.PersonsViewModel;
 

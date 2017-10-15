@@ -1,4 +1,6 @@
-package com.example.ntumba.mvvm_databinding;
+package com.example.ntumba.mvvm_databinding.model;
+
+import com.example.ntumba.mvvm_databinding.R;
 
 import java.util.ArrayList;
 import java.util.List;

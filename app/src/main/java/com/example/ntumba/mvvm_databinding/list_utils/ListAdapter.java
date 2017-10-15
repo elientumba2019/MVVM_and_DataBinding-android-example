@@ -6,7 +6,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
-import com.example.ntumba.mvvm_databinding.Person;
+import com.example.ntumba.mvvm_databinding.model.Person;
 import com.example.ntumba.mvvm_databinding.R;
 import com.example.ntumba.mvvm_databinding.databinding.SingleItemBinding;
 
