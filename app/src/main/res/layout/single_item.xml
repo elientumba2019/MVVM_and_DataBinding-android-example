@@ -3,6 +3,13 @@
     xmlns:android="http://schemas.android.com/apk/res/android" >
 
 
+    <data>
+        <variable
+            name="PersonVM"
+            type="com.example.ntumba.mvvm_databinding.viewModels.PersonsViewModel"/>
+    </data>
+
+
 <LinearLayout
     android:orientation="vertical"
     android:padding="@dimen/padding"
