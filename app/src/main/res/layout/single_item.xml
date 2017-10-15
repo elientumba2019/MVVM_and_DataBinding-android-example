@@ -28,6 +28,7 @@
             android:layout_width="70dp"
             android:padding="2dp"
             android:id="@+id/avatar"
+            android:src="@{PersonVM.avatar}"
             android:layout_height="70dp" />
 
 
@@ -42,7 +43,8 @@
             <TextView
                 android:layout_width="match_parent"
                 android:padding="2dp"
-                android:textSize="18dp"
+                android:textSize="@dimen/nameSize"
+                android:text="@{PersonVM.firstname}"
                 android:layout_height="wrap_content"
                 android:id="@+id/firstname"
                 />
@@ -51,9 +53,10 @@
             <TextView
                 android:layout_width="match_parent"
                 android:padding="2dp"
-                android:textSize="18dp"
+                android:textSize="@dimen/nameSize"
                 android:layout_height="wrap_content"
                 android:id="@+id/lastname"
+                android:text="@{PersonVM.lastname}"
                 />
 
 
