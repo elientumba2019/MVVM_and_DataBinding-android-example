@@ -56,10 +56,4 @@ public class PersonSingleTon {
         return list;
     }
 
-
-
-    public static void main(String[] args){
-        PersonSingleTon singleTon = PersonSingleTon.getSingleTonInstance();
-        System.out.println(singleTon.getPersonList().toString());
-    }
 }
