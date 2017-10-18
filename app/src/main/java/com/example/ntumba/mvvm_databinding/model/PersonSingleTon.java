@@ -6,6 +6,7 @@ import com.example.ntumba.mvvm_databinding.R;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 /**
  * Created by ntumba on 17-10-15.
@@ -72,4 +73,34 @@ public class PersonSingleTon {
         return list;
     }
 
+
+    /**
+     * returns a contact from the list if its in it
+     * @param id
+     * @return
+     */
+    public Person getPerson(UUID id){
+        for(int c = 0 ; c < listOfperson.size() ; c++){
+            if(id.equals(listOfperson.get(c).getId())){
+                return listOfperson.get(c);
+            }
+        }
+        return  null;
+    }
+
+
+    /**
+     * updates a contact
+     * @param person
+     * @return
+     */
+    public boolean updateContact(Person person){
+        for(int c = 0 ; c < listOfperson.size() ; c++){
+            if(person.getId().equals(listOfperson.get(c).getId())){
+                listOfperson.set(c , person);
+                return  true;
+            }
+        }
+        return  false;
+    }
 }
