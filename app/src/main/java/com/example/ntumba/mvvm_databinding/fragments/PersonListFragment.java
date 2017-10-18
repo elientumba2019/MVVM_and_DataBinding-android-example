@@ -25,6 +25,7 @@ import com.example.ntumba.mvvm_databinding.list_utils.ListAdapter;
 public class PersonListFragment extends Fragment {
 
 
+
     public PersonListFragment(){}
 
 
@@ -73,5 +74,12 @@ public class PersonListFragment extends Fragment {
      */
     public static PersonListFragment getFragmentInstance(){
         return new PersonListFragment();
+    }
+
+
+    @Override
+    public void onResume() {
+        super.onResume();
+
     }
 }

@@ -1,5 +1,7 @@
 package com.example.ntumba.mvvm_databinding.model;
 
+import android.support.annotation.NonNull;
+
 import com.example.ntumba.mvvm_databinding.R;
 
 import java.util.ArrayList;
@@ -11,15 +13,15 @@ import java.util.List;
 
 public class PersonSingleTon {
 
-    private static PersonSingleTon personSingleTon;
-    private static List<Person> list;
+    private static PersonSingleTon personSingleTon = null;
+    private  List<Person> listOfperson;
 
 
     /**
      * constructor
      */
     private PersonSingleTon(){
-        list = new ArrayList<>();
+        listOfperson = getList();
     }
 
 
@@ -34,7 +36,10 @@ public class PersonSingleTon {
             personSingleTon = new PersonSingleTon();
             return personSingleTon;
         }
-        return personSingleTon;
+        else {
+            return personSingleTon;
+        }
+
     }
 
 
@@ -44,6 +49,15 @@ public class PersonSingleTon {
      * @return
      */
     public List<Person> getPersonList(){
+        return this.listOfperson;
+    }
+
+
+
+
+    @NonNull
+    private List<Person> getList() {
+        ArrayList<Person> list = new ArrayList<>();
 
         for(int c = 0 ; c < 20 ; c++){
             Person person = new Person();

@@ -38,8 +38,6 @@ public class ListViewHolder extends RecyclerView.ViewHolder implements View.OnCl
         this.view = itemBinding.getRoot();
         this.context = context;
         itemBinding.setPersonVM(new PersonsViewModel());
-
-
         view.setOnClickListener(this);
     }
 
