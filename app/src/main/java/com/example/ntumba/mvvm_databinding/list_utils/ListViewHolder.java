@@ -61,7 +61,7 @@ public class ListViewHolder extends RecyclerView.ViewHolder implements View.OnCl
 
         if(view.getId() == itemBinding.singleItem.getId()){
             Toast.makeText(context , person.getFirstname() , Toast.LENGTH_LONG).show();
-            Intent intent = EditContactActivity.getIntent(context);
+            Intent intent = EditContactActivity.getIntent(context , person.getId());
             context.startActivity(intent);
         }
     }

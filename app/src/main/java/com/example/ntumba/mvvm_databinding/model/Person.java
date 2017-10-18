@@ -24,6 +24,7 @@ public class Person {
         this.avatar = avatar;
         this.firstname = firstname;
         this.lastname = lastname;
+        this.id = UUID.randomUUID();
     }
 
 
@@ -58,4 +59,9 @@ public class Person {
     public void setSex(int sex) {
         this.sex = sex;
     }
+
+    public UUID getId() {
+        return id;
+    }
+
 }
