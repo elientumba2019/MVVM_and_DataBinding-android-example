@@ -7,6 +7,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.Toast;
 
 import com.example.ntumba.mvvm_databinding.R;
 import com.example.ntumba.mvvm_databinding.databinding.EditContactLayout2Binding;
@@ -14,6 +16,8 @@ import com.example.ntumba.mvvm_databinding.model.Person;
 import com.example.ntumba.mvvm_databinding.model.PersonSingleTon;
 
 import java.util.UUID;
+
+
 
 /**
  * Created by ntumba on 17-10-15.
@@ -29,13 +33,15 @@ public class EditContactFragment extends Fragment {
 
 
 
+
+
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         bundle = getArguments();
         UUID id = (UUID) bundle.getSerializable(PERSON_ID_KEY_ARGUMENT);
         person = PersonSingleTon.getSingleTonInstance().getPerson(id);
+
     }
 
 
@@ -61,8 +67,24 @@ public class EditContactFragment extends Fragment {
         binding.lastname.setText(person.getLastname());
 
 
+
+
+        binding.saveButton.setOnClickListener(c ->{
+
+            Person person = new Person(this.person.getAvatar() ,
+                    binding.firstname.getText().toString() ,
+                    binding.lastname.getText().toString());
+
+            person.setId(this.person.getId());
+
+            PersonSingleTon.getSingleTonInstance().updateContact(person);
+            getActivity().finish();
+
+        });
+
         return binding.getRoot();
     }
+
 
 
 
