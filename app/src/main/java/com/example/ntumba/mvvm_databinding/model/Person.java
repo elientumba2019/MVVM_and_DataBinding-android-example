@@ -17,7 +17,9 @@ public class Person {
 
 
 
-    public Person(){}
+    public Person(){
+        this.id = UUID.randomUUID();
+    }
 
 
     public Person(int avatar, String firstname, String lastname) {

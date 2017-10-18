@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import com.example.ntumba.mvvm_databinding.R;
 import com.example.ntumba.mvvm_databinding.databinding.EditContactLayout2Binding;
 import com.example.ntumba.mvvm_databinding.model.Person;
+import com.example.ntumba.mvvm_databinding.model.PersonSingleTon;
 
 import java.util.UUID;
 
@@ -33,6 +34,8 @@ public class EditContactFragment extends Fragment {
         super.onCreate(savedInstanceState);
 
         bundle = getArguments();
+        UUID id = (UUID) bundle.getSerializable(PERSON_ID_KEY_ARGUMENT);
+        person = PersonSingleTon.getSingleTonInstance().getPerson(id);
     }
 
 
@@ -52,6 +55,10 @@ public class EditContactFragment extends Fragment {
         //inflating the binding class
         EditContactLayout2Binding binding = DataBindingUtil.inflate
                 (inflater, R.layout.edit_contact_layout2 , container , false);
+
+
+        binding.firstname.setText(person.getFirstname());
+        binding.lastname.setText(person.getLastname());
 
 
         return binding.getRoot();
