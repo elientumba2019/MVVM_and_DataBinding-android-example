@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 
 import com.example.ntumba.mvvm_databinding.R;
 import com.example.ntumba.mvvm_databinding.databinding.EditContactLayout2Binding;
+import com.example.ntumba.mvvm_databinding.model.Person;
 
 import java.util.UUID;
 
@@ -21,6 +22,19 @@ public class EditContactFragment extends Fragment {
 
 
     public static final String PERSON_ID_KEY_ARGUMENT = "key";
+    private Person person;
+    private Bundle bundle;
+
+
+
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        bundle = getArguments();
+    }
+
 
 
 
