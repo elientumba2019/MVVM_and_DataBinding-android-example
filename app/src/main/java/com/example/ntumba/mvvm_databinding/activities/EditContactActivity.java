@@ -27,7 +27,7 @@ public class EditContactActivity extends SingleAbstractActivity {
 
         //getting the extra contained in the intent
         UUID personId = (UUID) getIntent().getSerializableExtra(PERSON_ID_KEY);
-        return EditContactFragment.getInstance();
+        return EditContactFragment.getInstance(personId);
     }
 
 

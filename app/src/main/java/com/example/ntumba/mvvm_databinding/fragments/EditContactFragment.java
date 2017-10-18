@@ -11,11 +11,17 @@ import android.view.ViewGroup;
 import com.example.ntumba.mvvm_databinding.R;
 import com.example.ntumba.mvvm_databinding.databinding.EditContactLayout2Binding;
 
+import java.util.UUID;
+
 /**
  * Created by ntumba on 17-10-15.
  */
 
 public class EditContactFragment extends Fragment {
+
+
+    public static final String PERSON_ID_KEY_ARGUMENT = "key";
+
 
 
     /**
@@ -44,7 +50,11 @@ public class EditContactFragment extends Fragment {
      * returns an instance of the fragment
      * @return
      */
-    public static EditContactFragment getInstance(){
-        return  new EditContactFragment();
+    public static EditContactFragment getInstance(UUID personID){
+        Bundle argument = new Bundle();
+        argument.putSerializable(PERSON_ID_KEY_ARGUMENT , personID);
+        EditContactFragment fragment = new EditContactFragment();
+        fragment.setArguments(argument);
+        return  fragment;
     }
 }
