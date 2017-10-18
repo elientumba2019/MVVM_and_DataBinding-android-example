@@ -2,4 +2,5 @@
 <resources>
     <dimen name="padding">16dp</dimen>
     <dimen name="nameSize">18sp</dimen>
+    <dimen name="text_size_for_edit">19sp</dimen>
 </resources>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+<LinearLayout
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:text="@string/firstname"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/text_size_for_edit"
+        android:layout_height="wrap_content"
+        />
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/firstname"
+        android:layout_marginBottom="5dp"
+        />
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:text="@string/lastname"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/text_size_for_edit"
+        android:layout_height="wrap_content"
+        />
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lastname"
+        android:layout_marginBottom="5dp"
+        />
+
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/save_button"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:text="@string/save_button"
+        android:textColor="@android:color/white"
+        android:shadowColor="@android:color/darker_gray"
+        android:background="@color/colorPrimary"
+        />
+
+
+
+
+</LinearLayout>
+
+</layout>

@@ -1,11 +1,15 @@
 package com.example.ntumba.mvvm_databinding.fragments;
 
+import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.example.ntumba.mvvm_databinding.R;
+import com.example.ntumba.mvvm_databinding.databinding.EditContactLayout2Binding;
 
 /**
  * Created by ntumba on 17-10-15.
@@ -24,7 +28,13 @@ public class EditContactFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater,ViewGroup container, Bundle savedInstanceState) {
-        return super.onCreateView(inflater, container, savedInstanceState);
+
+        //inflating the binding class
+        EditContactLayout2Binding binding = DataBindingUtil.inflate
+                (inflater, R.layout.edit_contact_layout2 , container , false);
+
+
+        return binding.getRoot();
     }
 
 
