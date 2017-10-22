@@ -25,6 +25,9 @@ import com.example.ntumba.mvvm_databinding.list_utils.ListAdapter;
 public class PersonListFragment extends Fragment {
 
 
+    private ListAdapter adapter;
+
+
 
     public PersonListFragment(){}
 
@@ -54,7 +57,7 @@ public class PersonListFragment extends Fragment {
 
         //getting the singleton
         PersonSingleTon singleTon = PersonSingleTon.getSingleTonInstance();
-        ListAdapter adapter = new ListAdapter(getActivity() , singleTon.getPersonList());
+         adapter = new ListAdapter(getActivity() , singleTon.getPersonList());
 
 
         //setting the fragment adapter
@@ -77,9 +80,12 @@ public class PersonListFragment extends Fragment {
     }
 
 
+
+    
     @Override
     public void onResume() {
         super.onResume();
-
+        PersonSingleTon singleton = PersonSingleTon.getSingleTonInstance();
+        adapter = new ListAdapter(getActivity() , singleton.getPersonList());
     }
 }
