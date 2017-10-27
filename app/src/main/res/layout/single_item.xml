@@ -15,6 +15,7 @@
     android:padding="@dimen/padding"
     android:id="@+id/singleItem"
     android:layout_width="match_parent"
+    android:onClick="@{() -> PersonVM.onContactClicked()}"
     android:layout_height="wrap_content">
 
 
