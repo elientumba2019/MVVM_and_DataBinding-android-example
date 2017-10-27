@@ -1,5 +1,7 @@
 package com.example.ntumba.mvvm_databinding.viewModels;
 
+import com.example.ntumba.mvvm_databinding.model.Person;
+
 import org.junit.Before;
 
 import static org.junit.Assert.*;
@@ -10,7 +12,8 @@ import static org.junit.Assert.*;
 public class PersonsViewModelTest {
 
 
-    private So
+    private PersonsViewModel subject;
+    private Person person;
 
 
     /**
@@ -19,6 +22,14 @@ public class PersonsViewModelTest {
      */
     @Before
     public void setUp() throws Exception {
+        subject = new PersonsViewModel();
+        person = new Person(00 , "Firstname" , "Lastname");
+        subject.setPerson(person);
     }
+
+
+
+
+
 
 }
