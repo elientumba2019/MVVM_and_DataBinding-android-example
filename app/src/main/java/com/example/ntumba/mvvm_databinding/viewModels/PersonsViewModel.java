@@ -72,4 +72,14 @@ public class PersonsViewModel extends BaseObservable{
     public int getAvatar(){
         return person.getAvatar();
     }
+
+
+
+
+    /**
+     * starts a new activity whenever a contact is clicked
+     * on
+     */
+    public void onContactClicked() {
+    }
 }

@@ -43,6 +43,16 @@ public class PersonsViewModelTest {
 
 
 
+    /**
+     * test for the method that will be used
+     * to start new activities
+     */
+    @Test
+    public void onContactClicked(){
+        subject.onContactClicked();
+    }
+
+
 
 
 }
