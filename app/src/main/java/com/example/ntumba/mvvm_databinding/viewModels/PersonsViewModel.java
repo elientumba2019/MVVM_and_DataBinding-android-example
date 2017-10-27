@@ -1,5 +1,6 @@
 package com.example.ntumba.mvvm_databinding.viewModels;
 
+import android.content.Context;
 import android.databinding.BaseObservable;
 import android.databinding.Bindable;
 
@@ -12,13 +13,14 @@ import com.example.ntumba.mvvm_databinding.model.Person;
 public class PersonsViewModel extends BaseObservable{
 
     private Person person;
+    private Context context;
 
 
     /**
      * constructor
      */
-    public PersonsViewModel(){
-
+    public PersonsViewModel(Context context){
+        this.context = context;
     }
 
 

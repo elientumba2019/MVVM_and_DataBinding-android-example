@@ -50,6 +50,7 @@ public class PersonsViewModelTest {
     @Test
     public void onContactClicked(){
         subject.onContactClicked();
+
     }
 
 
