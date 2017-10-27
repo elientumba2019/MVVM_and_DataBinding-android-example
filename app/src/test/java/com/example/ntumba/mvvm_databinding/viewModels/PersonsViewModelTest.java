@@ -7,6 +7,8 @@ import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.*;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.verify;
 
 /**
  * Created by ntumba on 17-10-27.
@@ -24,7 +26,7 @@ public class PersonsViewModelTest {
      */
     @Before
     public void setUp() throws Exception {
-        subject = new PersonsViewModel();
+        subject = mock(PersonsViewModel.class);
         person = new Person(00 , "Firstname" , "Lastname");
         subject.setPerson(person);
     }
@@ -43,6 +45,7 @@ public class PersonsViewModelTest {
 
 
 
+
     /**
      * test for the method that will be used
      * to start new activities
@@ -50,7 +53,7 @@ public class PersonsViewModelTest {
     @Test
     public void onContactClicked(){
         subject.onContactClicked();
-
+        verify(subject).startActivity();
     }
 
 

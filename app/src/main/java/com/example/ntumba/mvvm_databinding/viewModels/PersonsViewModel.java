@@ -24,6 +24,10 @@ public class PersonsViewModel extends BaseObservable{
     }
 
 
+
+    public PersonsViewModel(){}
+
+
     /**
      * return an instance of person
      * @return
@@ -83,5 +87,12 @@ public class PersonsViewModel extends BaseObservable{
      * on
      */
     public void onContactClicked() {
+    }
+
+
+
+
+    public void startActivity(){
+
     }
 }
