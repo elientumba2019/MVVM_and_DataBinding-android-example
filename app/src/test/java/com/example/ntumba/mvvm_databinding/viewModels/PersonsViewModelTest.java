@@ -3,7 +3,9 @@ package com.example.ntumba.mvvm_databinding.viewModels;
 import com.example.ntumba.mvvm_databinding.model.Person;
 
 import org.junit.Before;
+import org.junit.Test;
 
+import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.*;
 
 /**
@@ -25,6 +27,17 @@ public class PersonsViewModelTest {
         subject = new PersonsViewModel();
         person = new Person(00 , "Firstname" , "Lastname");
         subject.setPerson(person);
+    }
+
+
+
+
+    /**
+     * first name and last name test
+     */
+    @Test
+    public void personNameTest(){
+        assertThat(subject.getFirstname() , is(person.getFirstname()));
     }
 
 
