@@ -42,6 +42,10 @@ public class ListViewHolder extends RecyclerView.ViewHolder{
     }
 
 
+    /**
+     * binds
+     * @param person
+     */
     public void bind(Person person){
         this.person = person;
         itemBinding.avatar.setImageResource(person.getAvatar());
