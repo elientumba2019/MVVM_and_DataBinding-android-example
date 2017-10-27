@@ -15,7 +15,7 @@ import com.example.ntumba.mvvm_databinding.viewModels.PersonsViewModel;
  * Created by ntumba on 17-10-15.
  */
 
-public class ListViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+public class ListViewHolder extends RecyclerView.ViewHolder{
 
 
     private SingleItemBinding itemBinding;
@@ -37,8 +37,8 @@ public class ListViewHolder extends RecyclerView.ViewHolder implements View.OnCl
         this.itemBinding = itemBinding;
         this.view = itemBinding.getRoot();
         this.context = context;
-        itemBinding.setPersonVM(new PersonsViewModel());
-        view.setOnClickListener(this);
+        itemBinding.setPersonVM(new PersonsViewModel(context));
+
     }
 
 
@@ -49,20 +49,4 @@ public class ListViewHolder extends RecyclerView.ViewHolder implements View.OnCl
         itemBinding.executePendingBindings();
     }
 
-
-
-
-    /**
-     * onClick listener method
-     * @param view
-     */
-    @Override
-    public void onClick(View view) {
-
-        if(view.getId() == itemBinding.singleItem.getId()){
-            Toast.makeText(context , person.getFirstname() , Toast.LENGTH_LONG).show();
-            Intent intent = EditContactActivity.getIntent(context , person.getId());
-            context.startActivity(intent);
-        }
-    }
 }

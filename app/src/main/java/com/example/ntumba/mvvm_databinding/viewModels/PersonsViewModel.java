@@ -1,9 +1,11 @@
 package com.example.ntumba.mvvm_databinding.viewModels;
 
 import android.content.Context;
+import android.content.Intent;
 import android.databinding.BaseObservable;
 import android.databinding.Bindable;
 
+import com.example.ntumba.mvvm_databinding.activities.EditContactActivity;
 import com.example.ntumba.mvvm_databinding.model.Person;
 
 /**
@@ -87,12 +89,17 @@ public class PersonsViewModel extends BaseObservable{
      * on
      */
     public void onContactClicked() {
+        startActivity();
     }
 
 
 
-
+    /**
+     * starts a new activity
+     */
     public void startActivity(){
-
+        Intent intent = EditContactActivity.getIntent(context , person.getId());
+        intent.setClass(context , EditContactActivity.class);
+        context.startActivity(intent);
     }
 }
